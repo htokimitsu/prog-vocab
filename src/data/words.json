@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "variable",
+    "english": "variable",
+    "japanese": "変数",
+    "example": "const count = 0; // Declare a variable to store the count",
+    "category": "syntax",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "constant",
+    "english": "constant",
+    "japanese": "定数",
+    "example": "const MAX_RETRIES = 3; // A constant that never changes",
+    "category": "syntax",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "function",
+    "english": "function",
+    "japanese": "関数",
+    "example": "function greet(name) { return `Hello, ${name}`; }",
+    "category": "syntax",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "argument",
+    "english": "argument",
+    "japanese": "引数（呼び出し側が渡す値）",
+    "example": "greet('Alice'); // 'Alice' is the argument passed to the function",
+    "category": "syntax",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "return-value",
+    "english": "return value",
+    "japanese": "戻り値",
+    "example": "const result = add(2, 3); // result holds the return value 5",
+    "category": "syntax",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "parameter",
+    "english": "parameter",
+    "japanese": "仮引数（関数定義側の変数）",
+    "example": "function add(a, b) { return a + b; } // a and b are parameters",
+    "category": "syntax",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scope",
+    "english": "scope",
+    "japanese": "スコープ（変数の有効範囲）",
+    "example": "Variables declared inside a block are not accessible outside its scope.",
+    "category": "syntax",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "closure",
+    "english": "closure",
+    "japanese": "クロージャ",
+    "example": "function counter() { let n = 0; return () => ++n; } // inner function closes over n",
+    "category": "syntax",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "iteration",
+    "english": "iteration",
+    "japanese": "反復処理",
+    "example": "Each iteration of the loop processes one item in the array.",
+    "category": "syntax",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "conditional",
+    "english": "conditional",
+    "japanese": "条件分岐",
+    "example": "Use a conditional statement to execute code only when a condition is true.",
+    "category": "syntax",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "recursion",
+    "english": "recursion",
+    "japanese": "再帰",
+    "example": "function factorial(n) { return n <= 1 ? 1 : n * factorial(n - 1); }",
+    "category": "syntax",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "higher-order-function",
+    "english": "higher-order function",
+    "japanese": "高階関数",
+    "example": "map and filter are higher-order functions that accept a function as an argument.",
+    "category": "syntax",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "destructuring",
+    "english": "destructuring",
+    "japanese": "分割代入",
+    "example": "const { name, age } = user; // destructuring assignment",
+    "category": "syntax",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "spread-operator",
+    "english": "spread operator",
+    "japanese": "スプレッド演算子",
+    "example": "const merged = [...arr1, ...arr2]; // spread both arrays into one",
+    "category": "syntax",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "type-coercion",
+    "english": "type coercion",
+    "japanese": "型強制（暗黙の型変換）",
+    "example": "'5' + 1 results in '51' due to implicit type coercion in JavaScript.",
+    "category": "syntax",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "array",
+    "english": "array",
+    "japanese": "配列",
+    "example": "const fruits = ['apple', 'banana', 'cherry'];",
+    "category": "data-structures",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "index",
+    "english": "index",
+    "japanese": "インデックス（添え字）",
+    "example": "fruits[0] accesses the first element using index 0.",
+    "category": "data-structures",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "object",
+    "english": "object",
+    "japanese": "オブジェクト",
+    "example": "const user = { name: 'Alice', age: 30 }; // key-value pairs",
+    "category": "data-structures",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "key-value-pair",
+    "english": "key-value pair",
+    "japanese": "キーと値のペア",
+    "example": "In a dictionary, each key-value pair maps a word to its definition.",
+    "category": "data-structures",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "stack",
+    "english": "stack",
+    "japanese": "スタック（後入れ先出し）",
+    "example": "The call stack tracks function calls; the last called is the first to return.",
+    "category": "data-structures",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "queue",
+    "english": "queue",
+    "japanese": "キュー（先入れ先出し）",
+    "example": "A task queue processes jobs in the order they were added (FIFO).",
+    "category": "data-structures",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "linked-list",
+    "english": "linked list",
+    "japanese": "連結リスト",
+    "example": "Each node in a linked list holds data and a pointer to the next node.",
+    "category": "data-structures",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "hash-map",
+    "english": "hash map",
+    "japanese": "ハッシュマップ（辞書型）",
+    "example": "A hash map provides O(1) average lookup by hashing keys to bucket indices.",
+    "category": "data-structures",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "traversal",
+    "english": "traversal",
+    "japanese": "走査（データ構造の全要素を辿ること）",
+    "example": "Tree traversal visits every node in a specific order such as in-order or pre-order.",
+    "category": "data-structures",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sorting",
+    "english": "sorting",
+    "japanese": "ソート（整列）",
+    "example": "Sorting an array by price makes it easier to find the cheapest item.",
+    "category": "data-structures",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "binary-search",
+    "english": "binary search",
+    "japanese": "二分探索",
+    "example": "Binary search halves the search space each step, achieving O(log n) complexity.",
+    "category": "data-structures",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "time-complexity",
+    "english": "time complexity",
+    "japanese": "時間計算量",
+    "example": "The time complexity of bubble sort is O(n²) in the worst case.",
+    "category": "data-structures",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "memoization",
+    "english": "memoization",
+    "japanese": "メモ化（計算結果のキャッシュ）",
+    "example": "Memoization stores previously computed results to avoid redundant calculations.",
+    "category": "data-structures",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "immutability",
+    "english": "immutability",
+    "japanese": "不変性",
+    "example": "Immutability means once an object is created its state cannot be changed.",
+    "category": "data-structures",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "graph",
+    "english": "graph",
+    "japanese": "グラフ（ノードとエッジの構造）",
+    "example": "A social network can be modeled as a graph where users are nodes and friendships are edges.",
+    "category": "data-structures",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "repository",
+    "english": "repository",
+    "japanese": "リポジトリ",
+    "example": "Clone the repository with: git clone https://github.com/user/repo.git",
+    "category": "git",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "commit",
+    "english": "commit",
+    "japanese": "コミット（変更の記録）",
+    "example": "git commit -m 'feat: add login page' saves a snapshot of your changes.",
+    "category": "git",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "branch",
+    "english": "branch",
+    "japanese": "ブランチ（開発の分岐）",
+    "example": "Create a new branch with: git checkout -b feature/user-auth",
+    "category": "git",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "merge",
+    "english": "merge",
+    "japanese": "マージ（ブランチの統合）",
+    "example": "git merge feature/login integrates the feature branch into main.",
+    "category": "git",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "pull-request",
+    "english": "pull request",
+    "japanese": "プルリクエスト（変更のレビュー依頼）",
+    "example": "Open a pull request so teammates can review your changes before merging.",
+    "category": "git",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "conflict",
+    "english": "conflict",
+    "japanese": "コンフリクト（競合）",
+    "example": "A merge conflict occurs when two branches edit the same line differently.",
+    "category": "git",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "rebase",
+    "english": "rebase",
+    "japanese": "リベース（コミット履歴の付け替え）",
+    "example": "git rebase main replays your commits on top of the latest main branch.",
+    "category": "git",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "stash",
+    "english": "stash",
+    "japanese": "スタッシュ（一時的な変更退避）",
+    "example": "git stash saves uncommitted changes so you can switch branches safely.",
+    "category": "git",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "tag",
+    "english": "tag",
+    "japanese": "タグ（リリースに付けるラベル）",
+    "example": "git tag v1.0.0 marks a specific commit as a release version.",
+    "category": "git",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "cherry-pick",
+    "english": "cherry-pick",
+    "japanese": "チェリーピック（特定コミットの取り込み）",
+    "example": "git cherry-pick abc123 applies a single commit from another branch.",
+    "category": "git",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "squash",
+    "english": "squash",
+    "japanese": "スカッシュ（複数コミットを1つにまとめる）",
+    "example": "Squash your WIP commits before merging to keep the history clean.",
+    "category": "git",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "bisect",
+    "english": "bisect",
+    "japanese": "二分探索でバグを特定する（git bisect）",
+    "example": "git bisect uses binary search to find the commit that introduced a bug.",
+    "category": "git",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "reflog",
+    "english": "reflog",
+    "japanese": "参照ログ（Gitの操作履歴）",
+    "example": "git reflog shows all recent HEAD movements, useful for recovering lost commits.",
+    "category": "git",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "submodule",
+    "english": "submodule",
+    "japanese": "サブモジュール（外部リポジトリの取り込み）",
+    "example": "git submodule add https://github.com/lib/utils embeds a repo inside your repo.",
+    "category": "git",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "worktree",
+    "english": "worktree",
+    "japanese": "ワークツリー（複数ブランチの同時チェックアウト）",
+    "example": "git worktree add ../hotfix hotfix/123 lets you work on two branches simultaneously.",
+    "category": "git",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "endpoint",
+    "english": "endpoint",
+    "japanese": "エンドポイント（APIのURL）",
+    "example": "The /users endpoint returns a list of all registered users.",
+    "category": "api",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "request",
+    "english": "request",
+    "japanese": "リクエスト（サーバーへの要求）",
+    "example": "The client sends a GET request to fetch the user's profile data.",
+    "category": "api",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "response",
+    "english": "response",
+    "japanese": "レスポンス（サーバーからの返答）",
+    "example": "The server returns a 200 response with JSON data in the body.",
+    "category": "api",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "status-code",
+    "english": "status code",
+    "japanese": "ステータスコード（HTTPの応答コード）",
+    "example": "A 404 status code means the requested resource was not found.",
+    "category": "api",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "payload",
+    "english": "payload",
+    "japanese": "ペイロード（送受信するデータ本体）",
+    "example": "The request payload contains the new user's name and email as JSON.",
+    "category": "api",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "authentication",
+    "english": "authentication",
+    "japanese": "認証（本人確認）",
+    "example": "Include a Bearer token in the Authorization header for authentication.",
+    "category": "api",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "pagination",
+    "english": "pagination",
+    "japanese": "ページネーション（データの分割取得）",
+    "example": "Use ?page=2&limit=20 to implement pagination for large result sets.",
+    "category": "api",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "idempotent",
+    "english": "idempotent",
+    "japanese": "べき等（何度実行しても結果が同じ）",
+    "example": "PUT requests should be idempotent: calling them multiple times has the same effect.",
+    "category": "api",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "rate-limiting",
+    "english": "rate limiting",
+    "japanese": "レートリミット（リクエスト数の制限）",
+    "example": "The API returns 429 Too Many Requests when rate limiting is triggered.",
+    "category": "api",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "webhook",
+    "english": "webhook",
+    "japanese": "ウェブフック（イベント駆動のHTTP通知）",
+    "example": "A webhook fires a POST request to your URL whenever a payment is completed.",
+    "category": "api",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "serialization",
+    "english": "serialization",
+    "japanese": "シリアライズ（データを転送形式に変換）",
+    "example": "JSON.stringify() serializes a JavaScript object into a JSON string for transmission.",
+    "category": "api",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "versioning",
+    "english": "versioning",
+    "japanese": "バージョニング（APIのバージョン管理）",
+    "example": "Use /api/v2/users to introduce breaking changes without affecting v1 clients.",
+    "category": "api",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "cors",
+    "english": "CORS",
+    "japanese": "クロスオリジンリソース共有",
+    "example": "Set Access-Control-Allow-Origin: * to allow CORS requests from any domain.",
+    "category": "api",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "graphql",
+    "english": "GraphQL",
+    "japanese": "GraphQL（柔軟なAPIクエリ言語）",
+    "example": "With GraphQL, clients request exactly the fields they need in a single query.",
+    "category": "api",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "circuit-breaker",
+    "english": "circuit breaker",
+    "japanese": "サーキットブレーカー（障害時の遮断パターン）",
+    "example": "A circuit breaker stops sending requests to a failing service after a threshold.",
+    "category": "api",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "query",
+    "english": "query",
+    "japanese": "クエリ（データの検索・取得命令）",
+    "example": "SELECT * FROM users WHERE age > 18; // a SQL query to filter rows",
+    "category": "database",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "table",
+    "english": "table",
+    "japanese": "テーブル（データベースの表）",
+    "example": "The users table stores each registered user as a row with columns for name and email.",
+    "category": "database",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "column",
+    "english": "column",
+    "japanese": "カラム（テーブルの列）",
+    "example": "Add a created_at column to track when each record was inserted.",
+    "category": "database",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "primary-key",
+    "english": "primary key",
+    "japanese": "主キー（行を一意に識別するカラム）",
+    "example": "The id column is the primary key; it uniquely identifies each row.",
+    "category": "database",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "foreign-key",
+    "english": "foreign key",
+    "japanese": "外部キー（他テーブルへの参照）",
+    "example": "The order's user_id is a foreign key that references the users table.",
+    "category": "database",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "index-db",
+    "english": "index",
+    "japanese": "インデックス（検索高速化の索引）",
+    "example": "CREATE INDEX idx_email ON users(email); speeds up lookups by email.",
+    "category": "database",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "transaction",
+    "english": "transaction",
+    "japanese": "トランザクション（一連の処理のまとまり）",
+    "example": "Wrap a transfer in a transaction so both debit and credit succeed or fail together.",
+    "category": "database",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "migration",
+    "english": "migration",
+    "japanese": "マイグレーション（スキーマ変更の管理）",
+    "example": "Run the migration to add the phone_number column to the existing users table.",
+    "category": "database",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "join",
+    "english": "JOIN",
+    "japanese": "結合（複数テーブルのデータを組み合わせる）",
+    "example": "SELECT orders.id, users.name FROM orders JOIN users ON orders.user_id = users.id",
+    "category": "database",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "orm",
+    "english": "ORM",
+    "japanese": "オブジェクト関係マッピング",
+    "example": "With an ORM like Prisma, you write User.findMany() instead of raw SQL.",
+    "category": "database",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "normalization",
+    "english": "normalization",
+    "japanese": "正規化（データ重複排除の設計手法）",
+    "example": "Normalization splits repeated data into separate tables linked by foreign keys.",
+    "category": "database",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sharding",
+    "english": "sharding",
+    "japanese": "シャーディング（水平分割）",
+    "example": "Sharding distributes user data across multiple database servers by user_id range.",
+    "category": "database",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "replication",
+    "english": "replication",
+    "japanese": "レプリケーション（データの複製）",
+    "example": "Database replication copies data to a replica server for failover and read scaling.",
+    "category": "database",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "acid",
+    "english": "ACID",
+    "japanese": "ACID特性（トランザクションの信頼性原則）",
+    "example": "ACID guarantees Atomicity, Consistency, Isolation, and Durability of transactions.",
+    "category": "database",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "n-plus-one",
+    "english": "N+1 problem",
+    "japanese": "N+1問題（非効率なクエリの繰り返し）",
+    "example": "Fetching users then querying each user's posts separately causes an N+1 problem.",
+    "category": "database",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "exception",
+    "english": "exception",
+    "japanese": "例外（プログラムの異常事態）",
+    "example": "Throw an exception when the input is invalid instead of returning null.",
+    "category": "error-handling",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "try-catch",
+    "english": "try-catch",
+    "japanese": "try-catch（例外の捕捉構文）",
+    "example": "try { fetchData() } catch (err) { console.error(err) } // handle errors gracefully",
+    "category": "error-handling",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "stack-trace",
+    "english": "stack trace",
+    "japanese": "スタックトレース（エラーの呼び出し履歴）",
+    "example": "Read the stack trace to find which function call chain led to the error.",
+    "category": "error-handling",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "logging",
+    "english": "logging",
+    "japanese": "ロギング（動作履歴の記録）",
+    "example": "Add structured logging so you can trace what happened before an error.",
+    "category": "error-handling",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "null-check",
+    "english": "null check",
+    "japanese": "null チェック（null値の確認）",
+    "example": "Always perform a null check before accessing properties to avoid runtime errors.",
+    "category": "error-handling",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "fallback",
+    "english": "fallback",
+    "japanese": "フォールバック（代替処理）",
+    "example": "Show a fallback message if the API call fails or returns no data.",
+    "category": "error-handling",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "retry-logic",
+    "english": "retry logic",
+    "japanese": "リトライロジック（失敗時の再試行処理）",
+    "example": "Implement retry logic with exponential backoff for transient network failures.",
+    "category": "error-handling",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "validation-error",
+    "english": "validation error",
+    "japanese": "バリデーションエラー（入力値の不正）",
+    "example": "Return a 400 status with a validation error message when required fields are missing.",
+    "category": "error-handling",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "graceful-degradation",
+    "english": "graceful degradation",
+    "japanese": "グレースフルデグラデーション（段階的機能低下）",
+    "example": "If the recommendation service is down, fall back to showing popular items instead.",
+    "category": "error-handling",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "breakpoint",
+    "english": "breakpoint",
+    "japanese": "ブレークポイント（デバッガの停止点）",
+    "example": "Set a breakpoint on line 42 to pause execution and inspect variable values.",
+    "category": "error-handling",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "error-boundary",
+    "english": "error boundary",
+    "japanese": "エラーバウンダリ（エラー伝播の防止）",
+    "example": "A React error boundary catches rendering errors and shows a fallback UI.",
+    "category": "error-handling",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "panic",
+    "english": "panic",
+    "japanese": "パニック（回復不能なエラー）",
+    "example": "In Go, panic() stops normal execution and begins unwinding the stack.",
+    "category": "error-handling",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "idempotency-key",
+    "english": "idempotency key",
+    "japanese": "べき等キー（重複リクエスト防止の識別子）",
+    "example": "Send an idempotency key with payment requests to prevent double charges on retry.",
+    "category": "error-handling",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "observability",
+    "english": "observability",
+    "japanese": "オブザーバビリティ（システムの可観測性）",
+    "example": "Observability combines metrics, logs, and traces to understand system behavior.",
+    "category": "error-handling",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "dead-letter-queue",
+    "english": "dead letter queue",
+    "japanese": "デッドレターキュー（処理失敗メッセージの退避先）",
+    "example": "Failed messages are moved to a dead letter queue for later inspection and replay.",
+    "category": "error-handling",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "abstraction",
+    "english": "abstraction",
+    "japanese": "抽象化（複雑さを隠蔽すること）",
+    "example": "A function is an abstraction that hides implementation details behind a name.",
+    "category": "design-patterns",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "encapsulation",
+    "english": "encapsulation",
+    "japanese": "カプセル化（内部を隠してインターフェースを公開）",
+    "example": "Encapsulation hides private fields and exposes only getters and setters.",
+    "category": "design-patterns",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "interface",
+    "english": "interface",
+    "japanese": "インターフェース（型の契約）",
+    "example": "Define an interface to describe the shape a class or object must implement.",
+    "category": "design-patterns",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "separation-of-concerns",
+    "english": "separation of concerns",
+    "japanese": "関心の分離",
+    "example": "Keep business logic in services and presentation logic in components.",
+    "category": "design-patterns",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "single-responsibility",
+    "english": "single responsibility",
+    "japanese": "単一責任原則（一つのモジュールは一つの責任を持つ）",
+    "example": "A function that both fetches and formats data violates single responsibility.",
+    "category": "design-patterns",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "dependency-injection",
+    "english": "dependency injection",
+    "japanese": "依存性注入",
+    "example": "Pass the database client as a parameter instead of importing it directly.",
+    "category": "design-patterns",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "singleton",
+    "english": "singleton",
+    "japanese": "シングルトン（インスタンスを一つだけ持つパターン）",
+    "example": "A database connection pool is often implemented as a singleton.",
+    "category": "design-patterns",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "factory-pattern",
+    "english": "factory pattern",
+    "japanese": "ファクトリーパターン（オブジェクト生成の抽象化）",
+    "example": "A factory function creates the appropriate parser based on the file extension.",
+    "category": "design-patterns",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "observer-pattern",
+    "english": "observer pattern",
+    "japanese": "オブザーバーパターン（イベント通知の仕組み）",
+    "example": "The observer pattern lets multiple subscribers react to state changes via events.",
+    "category": "design-patterns",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "middleware",
+    "english": "middleware",
+    "japanese": "ミドルウェア（リクエスト処理の中間層）",
+    "example": "Authentication middleware checks the token before every protected route handler.",
+    "category": "design-patterns",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "event-driven",
+    "english": "event-driven",
+    "japanese": "イベント駆動（イベントをトリガーに処理を行う設計）",
+    "example": "In an event-driven architecture, services communicate by publishing and consuming events.",
+    "category": "design-patterns",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "cqrs",
+    "english": "CQRS",
+    "japanese": "コマンドクエリ責務分離",
+    "example": "CQRS separates write commands from read queries using different data models.",
+    "category": "design-patterns",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "hexagonal-architecture",
+    "english": "hexagonal architecture",
+    "japanese": "ヘキサゴナルアーキテクチャ（ポートとアダプター）",
+    "example": "Hexagonal architecture isolates core logic from external systems via port interfaces.",
+    "category": "design-patterns",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "domain-driven-design",
+    "english": "domain-driven design",
+    "japanese": "ドメイン駆動設計",
+    "example": "DDD models software around the business domain using entities and aggregates.",
+    "category": "design-patterns",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "eventual-consistency",
+    "english": "eventual consistency",
+    "japanese": "結果整合性（最終的に一致する一貫性モデル）",
+    "example": "In eventual consistency, replicas may briefly diverge but will converge over time.",
+    "category": "design-patterns",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "unit-test",
+    "english": "unit test",
+    "japanese": "ユニットテスト（単体テスト）",
+    "example": "Write a unit test for each function to verify it behaves correctly in isolation.",
+    "category": "testing",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "assertion",
+    "english": "assertion",
+    "japanese": "アサーション（期待値の検証）",
+    "example": "expect(add(2, 3)).toBe(5); // assertion checks the return value equals 5",
+    "category": "testing",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "test-case",
+    "english": "test case",
+    "japanese": "テストケース",
+    "example": "Write a test case for both valid input and edge cases like empty strings.",
+    "category": "testing",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "mock",
+    "english": "mock",
+    "japanese": "モック（依存関係の偽オブジェクト）",
+    "example": "Mock the database to avoid real writes during unit tests.",
+    "category": "testing",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "test-runner",
+    "english": "test runner",
+    "japanese": "テストランナー（テスト実行ツール）",
+    "example": "Run all tests with: jest --watch // Jest is a popular JavaScript test runner",
+    "category": "testing",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "coverage",
+    "english": "coverage",
+    "japanese": "カバレッジ（テストの網羅率）",
+    "example": "Aim for at least 80% code coverage to catch most regressions.",
+    "category": "testing",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "integration-test",
+    "english": "integration test",
+    "japanese": "統合テスト",
+    "example": "An integration test verifies that the API endpoint and database work together.",
+    "category": "testing",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "stub",
+    "english": "stub",
+    "japanese": "スタブ（固定値を返す偽の実装）",
+    "example": "Use a stub that always returns a fixed user object to test the login handler.",
+    "category": "testing",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "snapshot-test",
+    "english": "snapshot test",
+    "japanese": "スナップショットテスト（出力の差分検出）",
+    "example": "A snapshot test fails when the rendered component's output changes unexpectedly.",
+    "category": "testing",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "regression",
+    "english": "regression",
+    "japanese": "リグレッション（以前に修正したバグの再発）",
+    "example": "Adding a regression test ensures the same bug cannot silently reappear.",
+    "category": "testing",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "test-driven-development",
+    "english": "test-driven development",
+    "japanese": "テスト駆動開発（TDD）",
+    "example": "In TDD, you write a failing test first, then write code to make it pass.",
+    "category": "testing",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "flaky-test",
+    "english": "flaky test",
+    "japanese": "フレーキーテスト（非決定的に失敗するテスト）",
+    "example": "A flaky test passes sometimes and fails other times without code changes.",
+    "category": "testing",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "property-based-testing",
+    "english": "property-based testing",
+    "japanese": "プロパティベーステスト（自動生成入力によるテスト）",
+    "example": "Property-based testing generates hundreds of random inputs to find edge cases.",
+    "category": "testing",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "contract-test",
+    "english": "contract test",
+    "japanese": "コントラクトテスト（API契約の検証）",
+    "example": "Contract tests verify that a service fulfills the expectations of its consumers.",
+    "category": "testing",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "test-double",
+    "english": "test double",
+    "japanese": "テストダブル（テスト用の代替オブジェクト総称）",
+    "example": "Mocks, stubs, and fakes are all types of test doubles used to isolate units.",
+    "category": "testing",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "deployment",
+    "english": "deployment",
+    "japanese": "デプロイ（アプリの本番環境への配備）",
+    "example": "Trigger a deployment to production after all CI checks pass.",
+    "category": "devops",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "environment-variable",
+    "english": "environment variable",
+    "japanese": "環境変数",
+    "example": "Store the API key in an environment variable: process.env.API_KEY",
+    "category": "devops",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "container",
+    "english": "container",
+    "japanese": "コンテナ（隔離されたアプリ実行環境）",
+    "example": "Package the app into a Docker container so it runs the same everywhere.",
+    "category": "devops",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "pipeline",
+    "english": "pipeline",
+    "japanese": "パイプライン（自動化された処理フロー）",
+    "example": "The CI pipeline runs tests and linting on every push to the repository.",
+    "category": "devops",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "build",
+    "english": "build",
+    "japanese": "ビルド（ソースコードから実行可能物を生成）",
+    "example": "Run npm run build to compile TypeScript and bundle assets for production.",
+    "category": "devops",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "continuous-integration",
+    "english": "continuous integration",
+    "japanese": "継続的インテグレーション（CI）",
+    "example": "Continuous integration automatically builds and tests code on every commit.",
+    "category": "devops",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "rollback",
+    "english": "rollback",
+    "japanese": "ロールバック（以前のバージョンへの戻し）",
+    "example": "Trigger a rollback immediately if the new deployment causes error rate spikes.",
+    "category": "devops",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "load-balancer",
+    "english": "load balancer",
+    "japanese": "ロードバランサー（負荷分散）",
+    "example": "A load balancer distributes incoming traffic across multiple server instances.",
+    "category": "devops",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "autoscaling",
+    "english": "autoscaling",
+    "japanese": "オートスケーリング（負荷に応じた自動スケール）",
+    "example": "Autoscaling adds more instances when CPU usage exceeds 80% and removes them when it drops.",
+    "category": "devops",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "artifact",
+    "english": "artifact",
+    "japanese": "アーティファクト（ビルド成果物）",
+    "example": "Store the build artifact in object storage so other pipeline stages can use it.",
+    "category": "devops",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "infrastructure-as-code",
+    "english": "infrastructure as code",
+    "japanese": "コードとしてのインフラ（IaC）",
+    "example": "Define server infrastructure in Terraform files so it can be version-controlled.",
+    "category": "devops",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "blue-green-deployment",
+    "english": "blue-green deployment",
+    "japanese": "ブルーグリーンデプロイ（無停止切り替え手法）",
+    "example": "Blue-green deployment switches traffic from the old version to the new instantly.",
+    "category": "devops",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "canary-release",
+    "english": "canary release",
+    "japanese": "カナリアリリース（段階的ロールアウト）",
+    "example": "A canary release exposes the new version to 5% of users before full rollout.",
+    "category": "devops",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "service-mesh",
+    "english": "service mesh",
+    "japanese": "サービスメッシュ（マイクロサービス間通信の制御層）",
+    "example": "A service mesh like Istio handles retries, observability, and mTLS between services.",
+    "category": "devops",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "chaos-engineering",
+    "english": "chaos engineering",
+    "japanese": "カオスエンジニアリング（意図的障害実験）",
+    "example": "Chaos engineering deliberately kills instances to verify the system stays resilient.",
+    "category": "devops",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "code-review",
+    "english": "code review",
+    "japanese": "コードレビュー",
+    "example": "Request a code review before merging to catch bugs and share knowledge.",
+    "category": "collaboration",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "comment",
+    "english": "comment",
+    "japanese": "コメント（コードの説明文）",
+    "example": "Leave a comment explaining why you chose this approach, not just what it does.",
+    "category": "collaboration",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "documentation",
+    "english": "documentation",
+    "japanese": "ドキュメント",
+    "example": "Update the README documentation whenever you change a public API.",
+    "category": "collaboration",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "issue",
+    "english": "issue",
+    "japanese": "イシュー（バグや改善タスクの記録）",
+    "example": "Open an issue to report the bug before submitting a fix.",
+    "category": "collaboration",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "assignee",
+    "english": "assignee",
+    "japanese": "担当者",
+    "example": "Set the assignee on the issue so everyone knows who is responsible.",
+    "category": "collaboration",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "linter",
+    "english": "linter",
+    "japanese": "リンター（コードの静的解析ツール）",
+    "example": "The linter flagged unused variables and inconsistent indentation.",
+    "category": "collaboration",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "convention",
+    "english": "convention",
+    "japanese": "規約（チームの取り決め）",
+    "example": "Follow the naming convention: use camelCase for variables and PascalCase for types.",
+    "category": "collaboration",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "iteration-agile",
+    "english": "iteration",
+    "japanese": "イテレーション（アジャイル開発の反復サイクル）",
+    "example": "Each two-week iteration delivers a potentially shippable product increment.",
+    "category": "collaboration",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "retrospective",
+    "english": "retrospective",
+    "japanese": "レトロスペクティブ（振り返り会議）",
+    "example": "In the sprint retrospective, the team discusses what went well and what to improve.",
+    "category": "collaboration",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "dependency",
+    "english": "dependency",
+    "japanese": "依存関係",
+    "example": "List all project dependencies in package.json so others can reproduce the build.",
+    "category": "collaboration",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "technical-debt",
+    "english": "technical debt",
+    "japanese": "技術的負債",
+    "example": "Prioritize paying down technical debt before adding new features.",
+    "category": "collaboration",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "pair-programming",
+    "english": "pair programming",
+    "japanese": "ペアプログラミング",
+    "example": "Pair programming has one developer type while the other reviews in real time.",
+    "category": "collaboration",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "onboarding",
+    "english": "onboarding",
+    "japanese": "オンボーディング（新メンバーの受け入れ）",
+    "example": "A good onboarding doc helps new engineers set up their environment in under an hour.",
+    "category": "collaboration",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "post-mortem",
+    "english": "post-mortem",
+    "japanese": "ポストモーテム（障害後の原因分析）",
+    "example": "The post-mortem identified the root cause and added monitoring to prevent recurrence.",
+    "category": "collaboration",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "definition-of-done",
+    "english": "definition of done",
+    "japanese": "完了の定義",
+    "example": "Our definition of done requires tests, code review, and documentation to be complete.",
+    "category": "collaboration",
+    "difficulty": "advanced"
+  }
+]

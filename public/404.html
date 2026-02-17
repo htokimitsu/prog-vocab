@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prog Vocab</title>
+    <script>
+      // GitHub Pages SPA redirect
+      // https://github.com/rafgraph/spa-github-pages
+      const segmentCount = 1;
+      const path = window.location.pathname
+        .split("/")
+        .slice(0, 1 + segmentCount)
+        .join("/");
+      const remaining = window.location.pathname.slice(path.length);
+      if (remaining) {
+        window.location.replace(
+          path +
+            "?/" +
+            remaining +
+            window.location.search
+              .slice(1)
+              .split("&")
+              .filter(function (s) {
+                return !s.startsWith("/");
+              })
+              .join("&") +
+            window.location.hash
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

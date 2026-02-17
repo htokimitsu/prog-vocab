@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prog Vocab - プログラミング英単語学習</title>
+  </head>
+  <body>
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function () {
+        var query = window.location.search;
+        if (query.length > 1 && query[1] === "/") {
+          var decoded = query
+            .slice(2)
+            .split("&")
+            .filter(function (s) {
+              return s.length > 0;
+            })
+            .join("&");
+          var path = decoded.split("&")[0] || "";
+          var rest = decoded.slice(path.length);
+          window.history.replaceState(
+            null,
+            "",
+            window.location.pathname + path + (rest ? "?" + rest : "") + window.location.hash
+          );
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
