@@ -1,31 +1,27 @@
 // === Word Data ===
 
 export const CATEGORIES = [
-  "syntax",
-  "data-structures",
-  "git",
-  "api",
-  "database",
+  "basics",
+  "data-types",
+  "javascript",
+  "gas",
+  "python",
   "error-handling",
-  "design-patterns",
-  "testing",
-  "devops",
-  "collaboration",
+  "api-http",
+  "tools",
 ] as const
 
 export type Category = (typeof CATEGORIES)[number]
 
 export const CATEGORY_LABELS: Record<Category, string> = {
-  syntax: "基本構文",
-  "data-structures": "データ構造・アルゴリズム",
-  git: "Git / バージョン管理",
-  api: "API / HTTP",
-  database: "データベース",
-  "error-handling": "エラーハンドリング / デバッグ",
-  "design-patterns": "設計パターン / アーキテクチャ",
-  testing: "テスト",
-  devops: "DevOps / インフラ",
-  collaboration: "コードレビュー / コラボレーション",
+  basics: "基本構文（共通）",
+  "data-types": "データ型・構造",
+  javascript: "JavaScript",
+  gas: "Google Apps Script",
+  python: "Python",
+  "error-handling": "エラー処理",
+  "api-http": "API / HTTP / JSON",
+  tools: "開発ツール",
 }
 
 export const DIFFICULTIES = ["beginner", "intermediate", "advanced"] as const

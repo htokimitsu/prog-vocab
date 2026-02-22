@@ -32,10 +32,10 @@ describe("generateQuiz", () => {
   it("filters by category", () => {
     const result = generateQuiz(testWords, createEmptyProgress(), {
       ...baseConfig,
-      categories: ["git"],
+      categories: ["gas"],
       count: 100,
     })
-    expect(result.every((q) => q.word.category === "git")).toBe(true)
+    expect(result.every((q) => q.word.category === "gas")).toBe(true)
   })
 
   it("prioritizes weak words when prioritizeWeak is true", () => {
@@ -51,7 +51,7 @@ describe("generateQuiz", () => {
         },
       },
       {
-        wordId: "refactor",
+        wordId: "decorator",
         overrides: {
           status: "mastered",
           quizResults: [
@@ -70,10 +70,10 @@ describe("generateQuiz", () => {
       }),
     )
 
-    // "variable" should appear as first question more often than "refactor"
+    // "variable" should appear as first question more often than "decorator"
     const variableFirstCount = results.filter((r) => r[0].word.id === "variable").length
-    const refactorFirstCount = results.filter((r) => r[0].word.id === "refactor").length
-    expect(variableFirstCount).toBeGreaterThan(refactorFirstCount)
+    const decoratorFirstCount = results.filter((r) => r[0].word.id === "decorator").length
+    expect(variableFirstCount).toBeGreaterThan(decoratorFirstCount)
   })
 
   it("sets correctAnswer to japanese for en-to-ja type", () => {

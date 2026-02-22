@@ -17,40 +17,40 @@ describe("filterWords", () => {
   })
 
   it("filters by single category", () => {
-    const result = filterWords(testWords, { ...defaultOptions, categories: ["syntax"] })
-    expect(result.every((w) => w.category === "syntax")).toBe(true)
-    expect(result).toHaveLength(3)
+    const result = filterWords(testWords, { ...defaultOptions, categories: ["basics"] })
+    expect(result.every((w) => w.category === "basics")).toBe(true)
+    expect(result).toHaveLength(2)
   })
 
   it("filters by single difficulty", () => {
     const result = filterWords(testWords, { ...defaultOptions, difficulties: ["beginner"] })
     expect(result.every((w) => w.difficulty === "beginner")).toBe(true)
-    expect(result).toHaveLength(5)
+    expect(result).toHaveLength(7)
   })
 
   it("filters by category AND difficulty combined", () => {
     const result = filterWords(testWords, {
       ...defaultOptions,
-      categories: ["syntax"],
+      categories: ["basics"],
       difficulties: ["beginner"],
     })
-    expect(result.every((w) => w.category === "syntax" && w.difficulty === "beginner")).toBe(true)
-    expect(result).toHaveLength(3)
+    expect(result.every((w) => w.category === "basics" && w.difficulty === "beginner")).toBe(true)
+    expect(result).toHaveLength(2)
   })
 
   it("filters by multiple categories (OR logic)", () => {
     const result = filterWords(testWords, {
       ...defaultOptions,
-      categories: ["syntax", "git"],
+      categories: ["basics", "gas"],
     })
-    expect(result.every((w) => w.category === "syntax" || w.category === "git")).toBe(true)
-    expect(result).toHaveLength(4)
+    expect(result.every((w) => w.category === "basics" || w.category === "gas")).toBe(true)
+    expect(result).toHaveLength(3)
   })
 
   it("returns empty array when no words match filter", () => {
     const result = filterWords(testWords, {
       ...defaultOptions,
-      categories: ["devops"],
+      categories: ["python"],
       difficulties: ["beginner"],
     })
     expect(result).toHaveLength(0)
@@ -59,9 +59,9 @@ describe("filterWords", () => {
 
 describe("searchWords", () => {
   it("searches by english word (partial match)", () => {
-    const result = searchWords(testWords, "refact")
+    const result = searchWords(testWords, "prom")
     expect(result).toHaveLength(1)
-    expect(result[0].id).toBe("refactor")
+    expect(result[0].id).toBe("promise")
   })
 
   it("searches by japanese meaning", () => {
@@ -71,9 +71,9 @@ describe("searchWords", () => {
   })
 
   it("searches case-insensitively", () => {
-    const result = searchWords(testWords, "REFACTOR")
+    const result = searchWords(testWords, "PROMISE")
     expect(result).toHaveLength(1)
-    expect(result[0].id).toBe("refactor")
+    expect(result[0].id).toBe("promise")
   })
 
   it("returns all words for empty query", () => {

@@ -22,11 +22,10 @@ describe("calculateOverallStats", () => {
     const progress = createProgressWithWords([
       { wordId: "variable", overrides: { status: "mastered" } },
       { wordId: "function", overrides: { status: "mastered" } },
-      { wordId: "loop", overrides: { status: "mastered" } },
     ])
     const result = calculateOverallStats(testWords, progress)
-    expect(result.masteredCount).toBe(3)
-    expect(result.masteryRate).toBe(30) // 3/10 = 30%
+    expect(result.masteredCount).toBe(2)
+    expect(result.masteryRate).toBe(20) // 2/10 = 20%
   })
 
   it("calculates correctly when all words are mastered", () => {
@@ -43,7 +42,7 @@ describe("calculateOverallStats", () => {
     const progress = createProgressWithWords([
       { wordId: "variable", overrides: { status: "mastered" } },
       { wordId: "function", overrides: { status: "learning" } },
-      { wordId: "loop", overrides: { status: "learning" } },
+      { wordId: "array", overrides: { status: "learning" } },
     ])
     const result = calculateOverallStats(testWords, progress)
     expect(result.masteredCount + result.learningCount + result.unlearnedCount).toBe(
@@ -57,13 +56,12 @@ describe("calculateCategoryStats", () => {
     const progress = createProgressWithWords([
       { wordId: "variable", overrides: { status: "mastered" } },
       { wordId: "function", overrides: { status: "mastered" } },
-      { wordId: "loop", overrides: { status: "learning" } },
     ])
     const result = calculateCategoryStats(testWords, progress)
-    const syntaxStats = result.find((s) => s.category === "syntax")
-    expect(syntaxStats).toBeDefined()
-    expect(syntaxStats!.totalWords).toBe(3)
-    expect(syntaxStats!.masteredCount).toBe(2)
+    const basicsStats = result.find((s) => s.category === "basics")
+    expect(basicsStats).toBeDefined()
+    expect(basicsStats!.totalWords).toBe(2)
+    expect(basicsStats!.masteredCount).toBe(2)
   })
 
   it("returns 0% mastery for unstudied categories", () => {
@@ -71,9 +69,9 @@ describe("calculateCategoryStats", () => {
       { wordId: "variable", overrides: { status: "mastered" } },
     ])
     const result = calculateCategoryStats(testWords, progress)
-    const gitStats = result.find((s) => s.category === "git")
-    expect(gitStats).toBeDefined()
-    expect(gitStats!.masteryRate).toBe(0)
+    const gasStats = result.find((s) => s.category === "gas")
+    expect(gasStats).toBeDefined()
+    expect(gasStats!.masteryRate).toBe(0)
   })
 })
 
@@ -82,14 +80,16 @@ describe("calculateDifficultyStats", () => {
     const progress = createProgressWithWords([
       { wordId: "variable", overrides: { status: "mastered" } },
       { wordId: "function", overrides: { status: "mastered" } },
-      { wordId: "commit", overrides: { status: "mastered" } },
+      { wordId: "array", overrides: { status: "mastered" } },
+      { wordId: "get-range", overrides: { status: "mastered" } },
+      { wordId: "try-catch", overrides: { status: "mastered" } },
       { wordId: "endpoint", overrides: { status: "mastered" } },
-      { wordId: "loop", overrides: { status: "mastered" } },
+      { wordId: "npm", overrides: { status: "mastered" } },
     ])
     const result = calculateDifficultyStats(testWords, progress)
     const beginnerStats = result.find((s) => s.difficulty === "beginner")
     expect(beginnerStats).toBeDefined()
-    expect(beginnerStats!.masteredCount).toBe(5)
+    expect(beginnerStats!.masteredCount).toBe(7)
     expect(beginnerStats!.masteryRate).toBe(100)
   })
 })
